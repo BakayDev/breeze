@@ -204,22 +204,21 @@ namespace Breeze
 
                 case DecorationButtonType::Maximize:
                 {
+                    // drow Maximize Button
                     if( isChecked() )
                     {
                         pen.setJoinStyle( Qt::RoundJoin );
                         painter->setPen( pen );
-
-                        painter->drawPolygon( QVector<QPointF>{
-                            QPointF( 4, 9 ),
-                            QPointF( 9, 4 ),
-                            QPointF( 14, 9 ),
-                            QPointF( 9, 14 )} );
+                        painter->drawLine( QPointF( 3.5, 5 ), QPointF( 14.5, 5 ) );
+                        painter->drawLine( QPointF( 3.5, 5 ), QPointF( 3.5, 13 ) );
+                        painter->drawLine( QPointF(14.5, 5 ), QPointF( 14.5, 13 ) );
+                        painter->drawLine( QPointF( 3.5, 13 ), QPointF( 14.5, 13 ) );
 
                     } else {
-                        painter->drawPolyline( QVector<QPointF>{
-                            QPointF( 4, 11 ),
-                            QPointF( 9, 6 ),
-                            QPointF( 14, 11 )});
+                       painter->drawLine( QPointF( 3.5, 5 ), QPointF( 14.5, 5 ) );
+                       painter->drawLine( QPointF( 3.5, 5 ), QPointF( 3.5, 13 ) );
+                       painter->drawLine( QPointF(14.5, 5 ), QPointF( 14.5, 13 ) );
+                       painter->drawLine( QPointF( 3.5, 13 ), QPointF( 14.5, 13 ));
                     }
                     break;
                 }
