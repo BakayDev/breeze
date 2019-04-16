@@ -325,9 +325,14 @@ namespace Breeze
 
                 case DecorationButtonType::ApplicationMenu:
                 {
-                    painter->drawRect( QRectF( 3.5, 4.5, 11, 1 ) );
-                    painter->drawRect( QRectF( 3.5, 8.5, 11, 1 ) );
-                    painter->drawRect( QRectF( 3.5, 12.5, 11, 1 ) );
+                    //painter->drawRect( QRectF( 3.5, 4.5, 11, 1 ) );
+                    //painter->drawRect( QRectF( 3.5, 8.5, 11, 1 ) );
+                    //painter->drawRect( QRectF( 3.5, 12.5, 11, 1 ) );
+
+                    painter->drawLine( QPointF( 3.5, 5 ), QPointF( 14.5, 5 ) );
+                    painter->drawLine( QPointF( 3.5, 9 ), QPointF( 14.5, 9 ) );
+                    painter->drawLine( QPointF( 3.5, 13 ), QPointF( 14.5, 13 ) );
+
                     break;
                 }
 
