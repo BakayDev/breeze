@@ -225,10 +225,8 @@ namespace Breeze
 
                 case DecorationButtonType::Minimize:
                 {
-                    painter->drawPolyline( QVector<QPointF>{
-                        QPointF( 4, 7 ),
-                        QPointF( 9, 12 ),
-                        QPointF( 14, 7 ) });
+                    // drow Minimize Button
+                    painter->drawLine( QPointF( 3.5, 9 ), QPointF( 14.5, 9 ) );
                     break;
                 }
 
